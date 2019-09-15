@@ -3,11 +3,18 @@
 
 def max_pairwise_product(numbers):
     n = len(numbers)
-    max_product = 0
+    max1=0
+    max2=0
     for first in range(n):
-        for second in range(first + 1, n):
-            max_product = max(max_product,
-                numbers[first] * numbers[second])
+        if(numbers[first]>max1):
+            max1=numbers[first]
+            index=first
+        
+    for second in range(n):
+        if(numbers[second]>max2 and second!=index):
+            max2=numbers[second]
+                
+    max_product=max1*max2
 
     return max_product
 
