@@ -10,7 +10,8 @@ def gcd_naive(a, b):
     	min=b
     while(max%min==0):
     	current_gcd=min
-    	max,min=min,max/min
+    	min=max/min
+    	max=current_gcd
     	
 	
 
