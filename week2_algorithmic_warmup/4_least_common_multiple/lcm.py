@@ -2,11 +2,21 @@
 import sys
 
 def lcm_naive(a, b):
-    for l in range(1, a*b + 1):
-        if l % a == 0 and l % b == 0:
-            return l
+    current_gcd = 1
+    max=b
+    min=a
+    if (a>b):
+    	max=a
+    	min=b
+    while(max%min!=0):
+    	current_gcd=min
+    	min=max%min
+    	max=current_gcd
+    else:
+        current_gcd=min
+	
 
-    return a*b
+    return a*b/current_gcd
 
 if __name__ == '__main__':
     input = sys.stdin.read()
