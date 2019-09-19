@@ -8,6 +8,8 @@ def lcm_naive(a, b):
     if (a>b):
     	max=a
     	min=b
+    if (min==0):
+        return 0
     while(max%min!=0):
     	current_gcd=min
     	min=max%min
@@ -15,7 +17,7 @@ def lcm_naive(a, b):
     else:
         current_gcd=min
 	
-
+    
     return int(a*b/current_gcd)
 
 if __name__ == '__main__':
