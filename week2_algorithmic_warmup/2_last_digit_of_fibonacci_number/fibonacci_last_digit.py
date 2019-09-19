@@ -9,7 +9,7 @@ def get_fibonacci_last_digit_naive(n):
     current  = 1
 
     for _ in range(n - 1):
-        previous, current = current, previous + current
+        previous, current = current%10, previous%10 + current%10
 
     return current % 10
 
