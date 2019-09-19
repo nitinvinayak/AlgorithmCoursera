@@ -9,9 +9,9 @@ def get_fibonacci_huge_naive(n, m):
     current  = 1
 
     for _ in range(n - 1):
-        previous, current = current, previous + current
+        previous, current = current%m, previous%m + current%m
 
-    return current % m
+    return current 
 
 if __name__ == '__main__':
     input = sys.stdin.read();

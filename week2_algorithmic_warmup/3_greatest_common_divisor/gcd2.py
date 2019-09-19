@@ -13,7 +13,7 @@ def gcd_naive(a, b):
     	min=max%min
     	max=current_gcd
     else:
-        current_gcd=min
+        current_gcd=min 
 	
 
     return current_gcd
