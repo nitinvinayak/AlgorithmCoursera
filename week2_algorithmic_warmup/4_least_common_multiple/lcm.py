@@ -16,7 +16,7 @@ def lcm_naive(a, b):
         current_gcd=min
 	
 
-    return a*b/current_gcd
+    return int(a*b/current_gcd)
 
 if __name__ == '__main__':
     input = sys.stdin.read()
